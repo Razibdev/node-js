@@ -18,7 +18,7 @@ router.get("/view_project", projectController.viewProject);
 // menu section route
 router.post('/:pid/add_sub_project', projectController.addProjectMenu);
 router.post('/:pid/view_sub_project', projectController.viewProjectMenu);
-router.delete('/:pid/delete_sub_project', projectController.deleteProjectMenu);
+router.delete('/:pid/delete_sub_project/:id', projectController.deleteProjectMenu);
 
 
 

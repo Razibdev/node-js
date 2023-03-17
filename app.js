@@ -22,7 +22,8 @@ const adminCommonRouter = require('./routes/adminCommonRoutes');
 //set security HTTP headers
 app.use(helmet());
 const corsOrigin ={
-  origin:'https://navigatorbd.com', //or whatever port your frontend is using
+  origin:['http://localhost:8080','https://navigatorbd.com'], //or whatever port your frontend is using
+  // origin:'https://navigatorbd.com', //or whatever port your frontend is using
   credentials:true,
   optionSuccessStatus:200
 }
