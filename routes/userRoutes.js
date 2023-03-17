@@ -11,7 +11,7 @@ router.post('/contact', userController.contactFormSubmit);
 
 //admin team member
 router.post('/add_team_member', userController.addTeamMemberAdmin);
-router.post('/view_team_member', userController.viewTeamMemberAdmin);
+router.get('/view_team_member', userController.viewTeamMemberAdmin);
 
 router.get('/get_team_list', userController.viewTeamMemberUser);
 
@@ -20,7 +20,7 @@ router.get('/get_team_list', userController.viewTeamMemberUser);
 // router.use(authController.protect);
 
 router.patch("/update-password", authController.updatePassword);
-router.get("/user-info",authController.protect, userController.userInfo);
+// router.get("/user-info",authController.protect, userController.userInfo);
 
 router.patch("/updateme", userController.updateMe);
 

@@ -22,7 +22,7 @@ const adminCommonRouter = require('./routes/adminCommonRoutes');
 //set security HTTP headers
 app.use(helmet());
 const corsOrigin ={
-  origin:'http://localhost:8080', //or whatever port your frontend is using
+  origin:'https://navigatorbd.com', //or whatever port your frontend is using
   credentials:true,
   optionSuccessStatus:200
 }
@@ -53,6 +53,7 @@ app.use(mongoSanitization());
 //Data sanitization against xss
 app.use(xss());
 // Prevent parameter pollution
+// app.use(bodyParser.json())
 app.use(
   hpp({
     whitelist: ["duration"],
